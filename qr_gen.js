@@ -1190,15 +1190,23 @@ async function generateQRCode() {
   qrCodeArray = traverseDataCoordinates(qrCodeArray, "", true);
 
   // Set canvas dimensions
-  canvas.width = qrSize * moduleSize;
-  canvas.height = qrSize * moduleSize;
+  canvas.width = qrSize * moduleSize + 60;
+  canvas.height = qrSize * moduleSize + 60;
+
+  ctx.fillStyle = "#fff";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 
   // Draw QR code on the canvas
   for (let i = 0; i < qrSize; i++) {
     for (let j = 0; j < qrSize; j++) {
       const bit = qrCodeArray[i][j];
       ctx.fillStyle = bit === "1" ? "#000" : "#fff";
-      ctx.fillRect(j * moduleSize, i * moduleSize, moduleSize, moduleSize);
+      ctx.fillRect(
+        j * moduleSize + 30,
+        i * moduleSize + 30,
+        moduleSize,
+        moduleSize
+      );
     }
   }
 

@@ -19,3 +19,27 @@ canvas {
   border-radius: 10px;
   display: none;
 }
+#download-btn {
+  display: none;
+}
+#download-btn,
+#generate-btn {
+  background-color: #008080;
+  border: none;
+  height: 38px;
+  padding-inline: 15px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 18px;
+  margin-block: 20px;
+}
+#download-btn:hover,
+#generate-btn:hover,
+#download-btn:focus,
+#generate-btn:focus {
+  background-color: #2e535c;
+  cursor: pointer;
+}
+#text {
+  border: none;
+}

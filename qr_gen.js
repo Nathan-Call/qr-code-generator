@@ -449,7 +449,6 @@ function traverseDataCoordinates(qrArr, input = "", xor = false) {
 
 async function generateQRCode() {
   const canvas = document.getElementById("qrcode");
-  canvas.style.display = "block";
   const ctx = canvas.getContext("2d");
   const text = document.getElementById("text").value;
 
@@ -1202,6 +1201,10 @@ async function generateQRCode() {
       ctx.fillRect(j * moduleSize, i * moduleSize, moduleSize, moduleSize);
     }
   }
+
+  canvas.style.display = "block";
+  const downloadBtn = document.getElementById("download-btn");
+  downloadBtn.style.display = "block";
 }
 
 // generateQRCode();

@@ -8,11 +8,17 @@
   </head>
   <body>
     <h1>QR Code Generator</h1>
-    <input type="text" id="text" placeholder="Enter text to encode" />
-    <button onclick="generateQRCode()">Generate QR Code</button>
+    <div>
+      <input
+        type="text"
+        id="text"
+        placeholder="Enter text to encode"
+        maxlength="32"
+      />
+      <button id="generate-btn" onclick="generateQRCode()">Generate</button>
+    </div>
     <canvas id="qrcode"></canvas>
-    <button onclick="downloadQRCode()">Download QR Code</button>
-
+    <button id="download-btn" onclick="downloadQRCode()">Download</button>
     <p>
       The word 'QR Code' is registered trademark of <br />DENSO WAVE
       INCORPORATED<br />
